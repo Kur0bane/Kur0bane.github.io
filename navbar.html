@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title of Page</title>
+    
+    <style>
+        .navbar{
+            background-color: black;
+            overflow: hidden;
+        }
+        
+        .navbar a{
+            color: red;
+            font-size: 24px;
+            text-decoration: none;
+            padding: 16px;
+            float:left;
+        }
+        
+        .morelinks{
+            color: red;
+            font-size: 24px;
+            text-decoration: none;
+            padding: 16px;
+        }
+            
+        .navbar a:hover, .morelinks:hover{
+            background-color: white;
+        }
+        
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        
+        .dropdown-content{
+            position: absolute;
+            z-index: 98;
+            display: none;
+            background-color: black;
+        }
+        
+        .dropdown{
+            background-color: black;
+            color: red;
+            float: left;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        
+        .dropdown-content a{
+            float: none;
+            display: block;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    
+ <div class="navbar">
+    <a href="https://www.yahoo.com">Yahoo</a>
+    <a href="https://www.google.com">Google</a>
+    <a href="https://www.youtube.com">Youtube</a>
+    <div class="dropdown">
+        <div class="morelinks">More Links</div>
+        <div class="dropdown-content">
+            <a href="https://www.awseducate.com">AWS Educate</a>
+            <a href="https://www.collegeboard.org">College Board</a>
+            </div>
+        </div>
+    </div>
+
+    <h1>Website Title</h1>
+    <p>The First Paragraph</p>
+    <p>Words</p>
+
+</body>
+</html>
