@@ -53,3 +53,7 @@ body{
 body{
     font-family:'Courier New', Courier, monospace;
 }
+
+th{
+    font-size: 20px;
+}
