@@ -465,6 +465,12 @@
                 state = "chooseSword"
             }
         }
+        else if (state == "choosePunch"){
+            if (button == 1){
+                intro();
+                state = "intro"
+            }
+        }
         else if(state == "chooseSword"){
             if (button == 1){
                 chooseCode();
@@ -473,6 +479,12 @@
             else if(button == 2){
                 chooseComplain();
                 state = "chooseComplain"
+            }
+        }
+        else if (state == "chooseCode"){
+            if (button == 1){
+                intro();
+                state = "intro"
             }
         }
         else if(state == "chooseComplain"){
