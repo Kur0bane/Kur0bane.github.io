@@ -196,6 +196,7 @@
         b4.style.display = "none";
     }
 
+    //Path Split
     function chooseToGo(){
         pic.src = "images/enyaba.jpg";
         ptext1.innerHTML = "Now that you have followed Cillary Hinton into the past to stop his communist reign, you are now at a crossroads in the location your dorm room used to be.";
@@ -205,7 +206,7 @@
         b1.innerHTML = "Go to Restaurant Gordon Ramsay";
         b2.innerHTML = "Eat some of your leftover ramen first";
         b3.innerHTML = "Look behind you into the narrow allyway.";
-        b4.innterHTML = "Go to the toilet";
+        b4.innerHTML = "Go to the toilet";
         b1.style.display = "block";
         b2.style.display = "block";
         b3.style.display = "block";
@@ -267,6 +268,7 @@
         b4.style.display = "none";
     }
 
+    //Leftover
     function chooseLeftover(){
         pic.src = "images/enyaba.jpg";
         ptext1.innerHTML = "You eat your leftover ramen and suffer sever stomach pain and die :(";
@@ -274,6 +276,87 @@
         ptext3.innerHTML = "You now must go back to the beginning...";
         ptext4.innerHTML = "";
         b1.innerHTML = "Rip";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //Turn Around
+    function chooseChallenge(){
+        pic.src = "images/enyaba.jpg";
+        ptext1.innerHTML = "Turning around, you see Cillary standing in the hallway behind you menacingly! ゴゴゴゴゴ";
+        ptext2.innerHTML = "PLACEHOLDER";
+        ptext3.innerHTML = "PLACEHOLDER";
+        ptext4.innerHTML = "Il Vento";
+        b1.innerHTML = "Fight off againt Cillary in a fist barrage!";
+        b2.innerHTML = "Use the random, very large sword that does not look like it's from that one videogame.";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    function choosePunch(){
+        pic.src = "images/enyaba.jpg";
+        ptext1.innerHTML = "PLACEHODLER PUNCH";
+        ptext2.innerHTML = "PLACEHOLDER";
+        ptext3.innerHTML = "PLACEHOLDER";
+        ptext4.innerHTML = "PLACEHOLDER";
+        b1.innerHTML = "PLACEHOLDER";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    function chooseSword(){
+        pic.src = "images/enyaba.jpg";
+        ptext1.innerHTML = "PLACEHODLER SWORD";
+        ptext2.innerHTML = "PLACEHOLDER";
+        ptext3.innerHTML = "PLACEHOLDER";
+        ptext4.innerHTML = "PLACEHOLDER";
+        b1.innerHTML = "PLACEHOLDER";
+        b2.innerHTML = "PLACEHOLDER"
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    function chooseCode(){
+        pic.src = "images/enyaba.jpg";
+        ptext1.innerHTML = "PLACEHODLER CODE";
+        ptext2.innerHTML = "PLACEHOLDER";
+        ptext3.innerHTML = "PLACEHOLDER";
+        ptext4.innerHTML = "PLACEHOLDER";
+        b1.innerHTML = "PLACEHOLDER";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    function chooseComplain(){
+        pic.src = "images/enyaba.jpg";
+        ptext1.innerHTML = "PLACEHODLER COMPLAIN";
+        ptext2.innerHTML = "PLACEHOLDER";
+        ptext3.innerHTML = "PLACEHOLDER";
+        ptext4.innerHTML = "PLACEHOLDER";
+        b1.innerHTML = "PLACEHOLDER";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    function chooseToilet(){
+        pic.src = "images/enyaba.jpg";
+        ptext1.innerHTML = "PLACEHODLER TOILET";
+        ptext2.innerHTML = "PLACEHOLDER";
+        ptext3.innerHTML = "PLACEHOLDER";
+        ptext4.innerHTML = "PLACEHOLDER";
+        b1.innerHTML = "PLACEHOLDER";
         b1.style.display = "block";
         b2.style.display = "none";
         b3.style.display = "none";
@@ -315,13 +398,26 @@
                 state = "chooseNoFollow"
             }
         }
-        //Gordon Ramsay Path
+        //Path Split
         else if(state == "chooseToGo"){
             if (button == 1){
                 chooseGoGordon();
                 state = "chooseGoGordon"
             }
+            else if (button == 2){
+                chooseLeftover();
+                state = "chooseLeftover"
+            }
+            else if (button == 3){
+                chooseChallenge();
+                state = "chooseChallenge"
+            }
+            else if (button == 4){
+                chooseToilet();
+                state = "chooseToilet"
+            }
         }
+        //Gordon Ramsay Path
         else if(state == "chooseGoGordon"){
             if (button == 1){
                 chooseFresh();
@@ -349,6 +445,46 @@
             if (button == 1){
                 intro();
                 state = "intro"
+            }
+        }
+        //Leftover
+        if(state == "chooseLeftover"){
+            if (button == 1){
+                intro();
+                state = "intro"
+            }
+        }
+        //Turn Around
+        if(state == "chooseChallenge"){
+            if (button == 1){
+                choosePunch();
+                state = "choosePunch"
+            }
+            else if (button == 2){
+                chooseSword();
+                state = "chooseSword"
+            }
+        }
+        else if(state == "chooseSword"){
+            if (button == 1){
+                chooseCode();
+                state = "chooseCode"
+            }
+            else if(button == 2){
+                chooseComplain();
+                state = "chooseComplain"
+            }
+        }
+        else if(state == "chooseComplain"){
+            if (button == 1){
+                intro();
+                state = "intro"
+            }
+        }
+        if(state == "chooseToilet"){
+            if (button == 1){
+                chooseNoFollow();
+                state = "chooseNoFollow"
             }
         }
         if(state == "chooseBeefRamen"){
